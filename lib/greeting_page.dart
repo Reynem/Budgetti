@@ -43,8 +43,7 @@ class GreetingPage extends StatelessWidget {
 
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, '/');
-                  // TODO: MAKE HOME PAGE AND CHANGE THIS ROUTE
+                  Navigator.pushReplacementNamed(context, '/nav');
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Theme.of(context).primaryColor,

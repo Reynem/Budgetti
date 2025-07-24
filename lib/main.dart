@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_showcase/bottom_navigation.dart';
 import 'package:portfolio_showcase/greeting_page.dart';
 
 void main() {
@@ -31,7 +32,8 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => GreetingPage(),
-      }
+        '/nav': (context) => BottomNavigationExample()
+      },
     );
   }
 }
