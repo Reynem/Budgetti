@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio_showcase/add_wallet_page.dart';
 
 class BottomNavigationExample extends StatefulWidget {
   const BottomNavigationExample({super.key});
@@ -11,11 +12,11 @@ class BottomNavigationExample extends StatefulWidget {
 class BottomNavigationExampleState extends State<BottomNavigationExample> {
   int _selectedIndex = 0;
 
-  static const List<String> _widgetOptions = <String>[
-    'Home',
-    'Active',
-    'Cards',
-    'Alerts',
+  static const List<Widget> _widgetOptions = <Widget>[
+    Text('Home'),
+    Text('Active'),
+    AddWalletPage(),
+    Text('Alerts'),
   ];
 
   void _onItemTapped(int index) {
@@ -34,10 +35,7 @@ class BottomNavigationExampleState extends State<BottomNavigationExample> {
         elevation: 0,
       ),
       body: Center(
-        child: Text(
-          _widgetOptions.elementAt(_selectedIndex),
-          style: Theme.of(context).textTheme.headlineLarge,
-        ),
+        child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
@@ -74,7 +72,6 @@ class BottomNavigationExampleState extends State<BottomNavigationExample> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // Действие при нажатии центральной кнопки
           if (kDebugMode) {
             print('Central button pressed');
           }
