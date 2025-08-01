@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_showcase/add_spending_page.dart'; // Import the new page
 import 'package:portfolio_showcase/bottom_navigation.dart';
 import 'package:portfolio_showcase/greeting_page.dart';
 
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => GreetingPage(),
-        '/nav': (context) => BottomNavigationExample()
+        '/nav': (context) => BottomNavigationExample(),
+        '/add-spending': (context) => AddSpendingPage(),
       },
     );
   }

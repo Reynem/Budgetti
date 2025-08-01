@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_showcase/add_wallet_page.dart';
 
@@ -28,10 +27,14 @@ class BottomNavigationExampleState extends State<BottomNavigationExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      backgroundColor: Theme
+          .of(context)
+          .scaffoldBackgroundColor,
       appBar: AppBar(
         title: Text('Budgetti'),
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        backgroundColor: Theme
+            .of(context)
+            .scaffoldBackgroundColor,
         elevation: 0,
       ),
       body: Center(
@@ -62,8 +65,13 @@ class BottomNavigationExampleState extends State<BottomNavigationExample> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Theme.of(context).primaryColor,
-        unselectedItemColor: Theme.of(context).colorScheme.secondary,
+        selectedItemColor: Theme
+            .of(context)
+            .primaryColor,
+        unselectedItemColor: Theme
+            .of(context)
+            .colorScheme
+            .secondary,
         backgroundColor: Colors.white,
         elevation: 10,
         onTap: _onItemTapped,
@@ -71,12 +79,10 @@ class BottomNavigationExampleState extends State<BottomNavigationExample> {
         showUnselectedLabels: true,
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          if (kDebugMode) {
-            print('Central button pressed');
-          }
-        },
-        backgroundColor: Theme.of(context).primaryColor,
+        onPressed: () => Navigator.pushNamed(context, '/add-spending'),
+        backgroundColor: Theme
+            .of(context)
+            .primaryColor,
         child: Icon(
           Icons.add,
           color: Colors.white,
