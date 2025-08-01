@@ -11,14 +11,13 @@ class AddSpendingPage extends StatelessWidget {
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back), // Changed from menu to back arrow
+          icon: Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context); // Navigate back to the previous screen
+            Navigator.pop(context);
           },
         ),
-        // Removed the profile icon
       ),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -112,51 +111,7 @@ class AddSpendingPage extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // Central button action
-        },
-        backgroundColor: Theme.of(context).primaryColor,
-        child: Icon(
-          Icons.add,
-          color: Colors.white,
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
-            activeIcon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.notifications_none),
-            activeIcon: Icon(Icons.notifications),
-            label: 'Alerts',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.credit_card_outlined),
-            activeIcon: Icon(Icons.credit_card),
-            label: 'Cards',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.notifications_active_outlined),
-            activeIcon: Icon(Icons.notifications_active),
-            label: 'Active',
-          ),
-        ],
-        currentIndex: 2, // Set the current index to 'Cards'
-        selectedItemColor: Theme.of(context).primaryColor,
-        unselectedItemColor: Theme.of(context).colorScheme.secondary,
-        backgroundColor: Colors.white,
-        elevation: 10,
-        onTap: (index) {
-          // Handle navigation
-        },
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-      ),
+      resizeToAvoidBottomInset: true,
     );
   }
 }
